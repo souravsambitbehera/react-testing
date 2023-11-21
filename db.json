@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Create a login form using formik in react js",
+      "body": "Todays article will demonstrate how to develop a login form in react js using formik."
+    },
+    {
+      "id": 2,
+      "title": "How to parse or read CSV files in ReactJS",
+      "body": "In this article, I will teach you how to parse or read CSV files in ReactJS in the simplest way possible. "
+    },
+    {
+      "id": 3,
+      "title": "try",
+      "body": "test data"
+    }
+  ],
+  "users": [
+    {
+      "name": "sourav",
+      "country": "Australia",
+      "id": 1
+    },
+    {
+      "name": "sambit",
+      "country": "India",
+      "id": 2
+    },
+    {
+      "name": "sambit",
+      "country": "India",
+      "id": 3
+    },
+    {
+      "name": "sourav",
+      "country": "Australia",
+      "id": 4
+    },
+    {
+      "name": "sourav",
+      "country": "South-Africa",
+      "id": 5
+    }
+  ]
+}

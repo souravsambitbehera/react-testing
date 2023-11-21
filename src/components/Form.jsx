@@ -1,6 +1,7 @@
-import { Button, Checkbox, MenuItem, TextField } from "@mui/material";
+import { Button, Checkbox, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { StyledForm } from "./Styled.Component";
+import axios from "axios";
 
 const Form = () => {
   // const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
@@ -8,6 +9,7 @@ const Form = () => {
   const [country, setCountry] = useState("India");
   const [checked, setChecked] = useState(false);
   const [error,setError] = useState("")
+  const[userData,setUserData]= useState({})
 
 //  console.log(country)
 // console.log(username)
@@ -19,12 +21,28 @@ const handleSumbitButton = (e)=>{
         setError("All Fields Are Required ")
     }else{
         setError("")
-        console.log(`Name is ${username}, Country is ${country},`)
-        
-        
+        const userData = {
+          name: username,
+          country: country,
+        };
+  
+        axios.post("http://localhost:3030/users", userData)
+          .then((response) => {
+            console.log(response.status);
+            console.log(`Name is ${username}, Country is ${country}`);
+            alert("You are succesfully signup")
+            window.location.reload();
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+        // console.log(`Name is ${username}, Country is ${country},`)
+       
+      
     }
-
+    
 }
+
   return (
     <StyledForm>
       <TextField
@@ -36,17 +54,15 @@ const handleSumbitButton = (e)=>{
         InputLabelProps={{ 'aria-label': 'Username' }}
         onChange={(e)=>setUsername(e.target.value)}
       />
-      <TextField
-        id="outlined-select-currency"
-        select
-        label="Country"
-        defaultValue="India"
-        helperText="Please select your currency"
-        // onChange={(e)=>setCountry()}
-        value={country}
-        onChange={(e) => setCountry(e.target.value)}
-        //
-      >
+      <FormControl fullWidth>
+       <InputLabel id="demo-simple-select-label">Country Name</InputLabel>
+       <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={country}
+    label="Country Name"
+    onChange={(e)=>setCountry(e.target.value)}
+  >
         {country_name.map((option) => (
           <MenuItem key={option.value} value={option.value}
          
@@ -54,7 +70,8 @@ const handleSumbitButton = (e)=>{
             {option.value}
           </MenuItem>
         ))}
-      </TextField>
+      </Select>
+      </FormControl>
       <span>
       <Checkbox onChange={() => setChecked(!checked)} /> Accept Checkbox
 
