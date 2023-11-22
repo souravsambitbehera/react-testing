@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import TestOne from "./TestOne";
+import TestOne from "../components/TestOne";
 import userEvent from "@testing-library/user-event";
 import { StaticRouter } from "react-router-dom/server";
 //static router for Link

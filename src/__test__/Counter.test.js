@@ -1,5 +1,5 @@
 import { render, screen, act } from "@testing-library/react";
-import Counter from "./Counter";
+import Counter from "../components/Counter";
 import userEvent from "@testing-library/user-event";
 
 test("test for Counter Component", () => {
