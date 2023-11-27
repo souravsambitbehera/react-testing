@@ -5,13 +5,13 @@ import App, { router } from './App';
 import reportWebVitals from './reportWebVitals';
 import TestOne from './components/TestOne';
 import { RouterProvider } from 'react-router-dom';
+import One from './mui_components/One';
+import Two from './mui_components/Two';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      
-    </RouterProvider>
+  <Two />      
   </React.StrictMode>
 );
 
