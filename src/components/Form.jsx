@@ -30,7 +30,7 @@ const handleSumbitButton = (e)=>{
           .then((response) => {
             console.log(response.status);
             console.log(`Name is ${username}, Country is ${country}`);
-            alert("You are succesfully signup")
+            alert("You are succesfully signup..")
             window.location.reload();
           })
           .catch((error) => {

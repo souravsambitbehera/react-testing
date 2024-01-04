@@ -42,6 +42,8 @@ const FetchApi = () => {
       </ul>
       )
     }
+    <>
+    </>
     </div>
   )
 }

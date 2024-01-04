@@ -12,13 +12,13 @@ import {
 import { courses_data } from "./courses_data";
 
 const datas = courses_data;
-console.log(datas);
+// console.log(datas);
 const Two = () => {
   const [open, setOpen] = useState(1);
   const handleCoursesClick = (dataId) => {
     setOpen(open === dataId ? null : dataId);
   };
-  console.log(open);
+  // console.log(open);
 
   return (
     <>

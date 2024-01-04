@@ -5,13 +5,15 @@ import App, { router } from './App';
 import reportWebVitals from './reportWebVitals';
 import TestOne from './components/TestOne';
 import { RouterProvider } from 'react-router-dom';
-import One from './mui_components/One';
-import Two from './mui_components/Two';
+import Three from './mui_components/Three';
+import SecondTesting from './testing/SecondTesting';
+import ForthTesting from './testing/ForthTesting';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Two />      
+    <SecondTesting />
+    {/* <ForthTesting /> */}
   </React.StrictMode>
 );
 

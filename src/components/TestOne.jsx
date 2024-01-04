@@ -11,7 +11,7 @@ const TestOne = () => {
         {/* <button >hide</button> */}
         <p>
         {
-            open? "Here some Test" :""
+            open? "Here some " :""
 
         }
         </p>

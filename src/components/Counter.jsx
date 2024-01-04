@@ -10,7 +10,7 @@ const Counter = () => {
   };
   return (
     <div>
-      <p>The count value is {count}</p>
+      <p>The count value is.. {count}</p>
       <button onClick={() => setCount(count + 1)}>Increment</button>
       <button onClick={hanldeDecrementButton}>Decrement</button>
     </div>
